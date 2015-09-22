@@ -1,0 +1,40 @@
+<div>
+    <div layout layout-sm="column" ng-if="ngModel.title">
+        <md-input-container flex>
+            <label>Title</label>
+            <input ng-model="ngModel.title.content">
+        </md-input-container>
+        <md-input-container>
+            <label>Class</label>
+            <md-select ng-model="ngModel.title.class">
+                <md-option ng-repeat="class in titleClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+
+    <div layout layout-sm="column" ng-if="ngModel.content">
+        <md-input-container flex>
+            <label>Content</label>
+            <input ng-model="ngModel.content.content">
+        </md-input-container>
+        <md-input-container>
+            <label>Class</label>
+            <md-select ng-model="ngModel.content.class">
+                <md-option ng-repeat="class in textClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+
+    <div layout layout-sm="column" ng-if="ngModel.image">
+        <md-input-container flex>
+            <label>Image</label>
+            <input ng-model="ngModel.image.src">
+        </md-input-container>
+        <md-input-container>
+            <label>Class</label>
+            <md-select ng-model="ngModel.image.class">
+                <md-option ng-repeat="class in imageClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+</div>

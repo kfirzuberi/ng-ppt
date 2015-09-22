@@ -11,21 +11,6 @@ angular.module( 'ngBoilerplate.pageCustomize', [
         });
 
 
-        $scope.titleClass = [];
-        Enumerable.From(listOfValue.titleClass).ForEach(function (elem) {
-            $scope.titleClass.push(elem);
-        });
-
-        $scope.textClass = [];
-        Enumerable.From(listOfValue.textClass).ForEach(function (elem) {
-            $scope.textClass.push(elem);
-        });
-
-        $scope.imageClass = [];
-        Enumerable.From(listOfValue.imageClass).ForEach(function (elem) {
-            $scope.imageClass.push(elem);
-        });
-
         $scope.currentPage = {
             nav: {
                 class: 'com__nav-link centered',

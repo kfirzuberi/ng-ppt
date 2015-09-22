@@ -16,6 +16,7 @@ angular.module( 'ngBoilerplate.services', [
         self.titleClass = {};
         self.titleClass['scaleIn'] = 'animate scaleIn';
         self.titleClass['slideInLeft'] = 'animate slideInLeft';
+        self.titleClass['slideInRight'] = 'animate slideInRight';
 
         self.textClass = {};
         self.textClass['slideInLeft_delay_3'] = 'animate slideInLeft delay-3';
@@ -24,6 +25,23 @@ angular.module( 'ngBoilerplate.services', [
         self.imageClass = {};
         self.imageClass['slideInRight_delay_3'] ='animate slideInRight delay-3';
         self.imageClass['scaleIn_delay_3'] = 'animate scaleIn delay-3';
+
+        self.animation = {};
+        self.animation['slideIn'] = 'slideIn';
+        self.animation['scaleIn'] = 'scaleIn';
+
+        self.direction = {};
+        self.direction['right'] = 'right';
+        self.direction['left'] = 'left';
+
+        self.delay = {};
+        self.delay['0'] = '';
+        self.delay['1'] = 'delay-1';
+        self.delay['2'] = 'delay-2';
+        self.delay['3'] = 'delay-3';
+        self.delay['4'] = 'delay-4';
+        self.delay['5'] = 'delay-5';
+
     })
 
 
