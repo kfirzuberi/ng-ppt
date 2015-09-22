@@ -1,4 +1,5 @@
 <div class="com" >
+
   <!--Contents-->
   <div class="com__content">
     <div ng-repeat="content in contents">
@@ -25,11 +26,11 @@
   <!--navs-->
   <nav class="com__nav">
     <ul class="com__nav-list">
-      <li class="com__nav-item" ng-repeat="content in contents">
-        <a ng-if="!content.isHalf" href="" class="{{content.nav.class}}">
+      <li class="com__nav-item" ng-repeat="content in contents" >
+        <a ng-if="!content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage(content);">
           <span ng-repeat="thumb in content.nav.thumbs" class="{{thumb.class}}"></span>
         </a>
-        <a ng-if="content.isHalf" href="" class="{{content.nav.class}}">
+        <a ng-if="content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage(content);">
           <div class="com__section-half">
             <span ng-repeat="thumb in content.nav.sideA.thumbs" class="{{thumb.class}}"></span>
           </div>
@@ -40,4 +41,6 @@
       </li>
     </ul>
   </nav>
+
+  <page-customize></page-customize>
 </div>

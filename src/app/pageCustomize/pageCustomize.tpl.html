@@ -1,0 +1,96 @@
+
+
+<div layout="column" layout-align="center end">
+    <md-content layout-padding>
+        <form name="userForm">
+            <!--<div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>First name</label>
+                    <input ng-model="user.firstName">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Last Name</label>
+                    <input ng-model="theMax">
+                </md-input-container>
+            </div>-->
+            <single-page ng-model="currentPage"></single-page>
+
+            <label>Class</label>
+            <md-select ng-model="currentPage.content_class">
+                <md-option ng-repeat="class in contentClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+            </md-input-container>
+
+            <div ng-if="!currentPage.isHalf">
+                <div layout layout-sm="column" ng-if="currentPage.title">
+                    <md-input-container flex>
+                        <label>Title</label>
+                        <input ng-model="currentPage.title.content">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Class</label>
+                        <md-select ng-model="currentPage.title.class">
+                            <md-option ng-repeat="class in titleClass" value="{{class.Value}}">{{class.Key}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+
+                <div layout layout-sm="column" ng-if="currentPage.content">
+                    <md-input-container flex>
+                        <label>Content</label>
+                        <input ng-model="currentPage.content.content">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Class</label>
+                        <md-select ng-model="currentPage.content.class">
+                            <md-option ng-repeat="class in textClass" value="{{class.Value}}">{{class.Key}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+
+                <div layout layout-sm="column" ng-if="currentPage.image">
+                    <md-input-container flex>
+                        <label>Image</label>
+                        <input ng-model="currentPage.image.src">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Class</label>
+                        <md-select ng-model="currentPage.image.class">
+                            <md-option ng-repeat="class in imageClass" value="{{class.Value}}">{{class.Key}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+            <div ng-if="currentPage.isHalf">
+                Side A
+                <md-input-container ng-if="currentPage.content.sideA.title" flex>
+                    <label>Title</label>
+                    <input ng-model="currentPage.content.sideA.title.content">
+                </md-input-container>
+                <md-input-container flex ng-if="currentPage.content.sideA.content">
+                    <label>Content</label>
+                    <input ng-model="currentPage.content.sideA.content.content">
+                </md-input-container>
+                <md-input-container flex ng-if="currentPage.content.sideA.image">
+                    <label>Image</label>
+                    <input ng-model="currentPage.content.sideA.image.src">
+                </md-input-container>
+                Side B
+                <md-input-container ng-if="currentPage.content.sideB.title" flex>
+                    <label>Title</label>
+                    <input ng-model="currentPage.content.sideB.title.content">
+                </md-input-container>
+                <md-input-container flex ng-if="currentPage.content.sideB.content">
+                    <label>Content</label>
+                    <input ng-model="currentPage.content.sideB.content.content">
+                </md-input-container>
+                <md-input-container flex ng-if="currentPage.content.sideB.image">
+                    <label>Image</label>
+                    <input ng-model="currentPage.content.sideB.image.src">
+                </md-input-container>
+            </div>
+
+
+        </form>
+    </md-content>
+</div>

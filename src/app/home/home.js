@@ -37,7 +37,13 @@ angular.module( 'ngBoilerplate.home', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope ) {
+.controller( 'HomeCtrl', function HomeController( $scope,$rootScope ,listOfValue) {
+
+      $scope.editPage = function (page) {
+        $rootScope.$broadcast('editPage',page);
+
+      };
+
       $scope.contents = [
         {
           nav: {
@@ -47,13 +53,13 @@ angular.module( 'ngBoilerplate.home', [
               {class: 'white-circle animate scaleIn delay-5'}
             ]
           },
-          content_class: 'com__section com__section--text centered',
+          content_class: listOfValue.contentClass.title_text_center,
           title: {
-            class: 'animate scaleIn',
+            class: listOfValue.titleClass.scaleIn,
             content: 'kfir zuberi'
           },
           image: {
-            class: 'animate scaleIn delay-3',
+            class: listOfValue.imageClass.scaleIn_delay_3,
             src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg'
           }
         },
@@ -66,13 +72,13 @@ angular.module( 'ngBoilerplate.home', [
               {class: 'white-line animate scaleInLeft delay-5'}
             ]
           },
-          content_class: 'com__section com__section--text',
+          content_class: listOfValue.contentClass.title_text,
           title: {
-            class: 'animate slideInLeft',
+            class: listOfValue.titleClass.slideInLeft,
             content: 'animate slideInLeft header'
           },
           content: {
-            class: 'animate slideInLeft delay-3',
+            class:  listOfValue.textClass.slideInLeft_delay_3,
             content: 'some content'
           }
         },
@@ -91,22 +97,22 @@ angular.module( 'ngBoilerplate.home', [
               ]
             }
           },
-          content_class: 'com__section com__section--text com__section--text-img',
+          content_class: listOfValue.contentClass.half_text_image,
           isHalf: true,
           content: {
             sideA: {
               title: {
-                class: 'animate slideInLeft',
+                class: listOfValue.titleClass.slideInLeft,
                 content: 'animate slideInLeft header'
               },
               content: {
-                class: 'animate slideInLeft delay-2',
+                class: listOfValue.textClass.slideInLeft_delay_2,
                 content: 'some content'
               }
             },
             sideB: {
               image: {
-                class: 'animate scaleIn delay-3',
+                class: listOfValue.imageClass.scaleIn_delay_3,
                 src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg'
               }
             }
@@ -120,13 +126,13 @@ angular.module( 'ngBoilerplate.home', [
               {class: 'white-circle animate scaleIn delay-5'}
             ]
           },
-          content_class: 'com__section com__section--text centered',
+          content_class: listOfValue.contentClass.title_text_center,
           title: {
-            class: 'animate scaleIn',
+            class: listOfValue.titleClass.scaleIn,
             content: 'Communication Design'
           },
           image: {
-            class: 'animate scaleIn delay-3',
+            class: listOfValue.imageClass.scaleIn_delay_3,
             src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg'
           }
         },
@@ -138,13 +144,13 @@ angular.module( 'ngBoilerplate.home', [
               {class: 'white-line animate scaleInLeft delay-4'},
               {class: 'white-line animate scaleInLeft delay-5'}
             ]
-          }, content_class: 'com__section com__section--text',
+          }, content_class: listOfValue.contentClass.title_text,
           title: {
-            class: 'animate slideInLeft',
+            class: listOfValue.titleClass.slideInLeft,
             content: 'Header'
           },
           content: {
-            class: 'animate slideInLeft delay-3',
+            class:  listOfValue.textClass.slideInLeft_delay_3,
             content: 'some content...'
           }
         },
@@ -162,22 +168,22 @@ angular.module( 'ngBoilerplate.home', [
                 {class: 'white-circle animate slideInRight delay-5'}
               ]
             }
-          }, content_class: 'com__section com__section--text com__section--text-img',
+          }, content_class: listOfValue.contentClass.half_text_image,
           isHalf: true,
           content: {
             sideA: {
               title: {
-                class: 'animate slideInLeft',
+                class: listOfValue.titleClass.slideInLeft,
                 content: 'animate slideInLeft header'
               },
               content: {
-                class: 'animate slideInLeft delay-2',
+                class: listOfValue.textClass.slideInLeft_delay_2,
                 content: 'some content'
               }
             },
             sideB: {
               image: {
-                class: 'animate slideInRight delay-3',
+                class: listOfValue.imageClass.slideInRight_delay_3,
                 src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg'
               }
             }
@@ -191,13 +197,13 @@ angular.module( 'ngBoilerplate.home', [
               {class: 'white-line animate scaleInLeft delay-4'},
               {class: 'white-line animate scaleInLeft delay-5'}
             ]
-          }, content_class: 'com__section com__section--text',
+          }, content_class: listOfValue.contentClass.title_text,
           title: {
-            class: 'animate slideInLeft',
+            class: listOfValue.titleClass.slideInLeft,
             content: 'Header'
           },
           content: {
-            class: 'animate slideInLeft delay-3',
+            class: listOfValue.textClass.slideInLeft_delay_3,
             content: 'some content...'
           }
         }

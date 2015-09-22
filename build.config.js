@@ -20,16 +20,16 @@ module.exports = {
    * app's unit tests.
    */
   app_files: {
-    js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
-    jsunit: [ 'src/**/*.spec.js' ],
-    
-    coffee: [ 'src/**/*.coffee', '!src/**/*.spec.coffee' ],
-    coffeeunit: [ 'src/**/*.spec.coffee' ],
+    js: ['src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js'],
+    jsunit: ['src/**/*.spec.js'],
 
-    atpl: [ 'src/app/**/*.tpl.html' ],
-    ctpl: [ 'src/common/**/*.tpl.html' ],
+    coffee: ['src/**/*.coffee', '!src/**/*.spec.coffee'],
+    coffeeunit: ['src/**/*.spec.coffee'],
 
-    html: [ 'src/index.html' ],
+    atpl: ['src/app/**/*.tpl.html'],
+    ctpl: ['src/common/**/*.tpl.html'],
+
+    html: ['src/index.html'],
     less: 'src/less/main.less'
   },
 
@@ -63,16 +63,18 @@ module.exports = {
   vendor_files: {
     js: [
       'vendor/angular/angular.js',
-      'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
-      'vendor/jquery/dist/jquery.min.js'
-
+      'vendor/jquery/dist/jquery.min.js',
+      'vendor/angular-animate/angular-animate.min.js',
+      'vendor/angular-aria/angular-aria.min.js',
+      'vendor/angular-material/angular-material.min.js',
+      'vendor/linqjs/linq.min.js'
     ],
     css: [
+      'vendor/angular-material/angular-material.min.css'
     ],
-    assets: [
-    ]
+    assets: []
   },
 };

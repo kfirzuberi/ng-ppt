@@ -1,6 +1,16 @@
 /**
  * Created by owner on 9/21/15.
  */
+
+
+$(function() {
+    $('.browsehappy').click(function() {
+        $(this).slideUp();
+    });
+});
+
+
+
 $(function() {
 
     var link = $('.com__nav-link');
