@@ -1,25 +1,49 @@
-<div layout="column" layout-align="center end">
-    <md-content layout-padding>
-        <form name="userForm">
-            <md-switch ng-model="currentPage.isHalf" aria-label="Switch 1">
-Page split: {{currentPage.isHalf ? 'Tow pages' : 'Single page'}}
-            </md-switch>
-            <label>Class</label>
-            <md-select ng-model="currentPage.content_class">
-                <md-option ng-repeat="class in contentClass" value="{{class.Value}}">{{class.Key}}</md-option>
-            </md-select>
-            </md-input-container>
+<md-dialog aria-label="Edit Page">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Edit Page</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon  md-svg-icon="ic_clear_24px" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content ><!--style="max-width:800px;max-height:810px; "-->
+        <div layout="column" layout-align="center end">
+            <md-content layout-padding>
+                <form name="userForm">
+                    <md-switch ng-model="currentPage.isHalf" aria-label="Switch 1">
+                        Page split: {{currentPage.isHalf ? 'Tow pages' : 'Single page'}}
+                    </md-switch>
+                    <label>Class</label>
+                    <md-select ng-model="currentPage.content_class">
+                        <md-option ng-repeat="class in contentClass" value="{{class.Value}}">{{class.Key}}</md-option>
+                    </md-select>
+                    </md-input-container>
 
-            <div ng-if="!currentPage.isHalf">
-                <single-page ng-model="currentPage"></single-page>
-            </div>
-            <div ng-if="currentPage.isHalf">
-                Side A
-                <single-page ng-model="currentPage.content.sideA"></single-page>
+                    <div ng-if="!currentPage.isHalf">
+                        <single-page ng-model="currentPage"></single-page>
+                    </div>
+                    <div ng-if="currentPage.isHalf">
+                        Side A
+                        <single-page ng-model="currentPage.content.sideA"></single-page>
 
-                Side B
-                <single-page ng-model="currentPage.content.sideB"></single-page>
-            </div>
-        </form>
-    </md-content>
-</div>
+                        Side B
+                        <single-page ng-model="currentPage.content.sideB"></single-page>
+                    </div>
+                </form>
+            </md-content>
+        </div>
+    </md-dialog-content>
+    <div class="md-actions" layout="row">
+        <md-button ng-click="answer('not useful')" >
+            <md-icon  md-svg-icon="ic_save_24px" aria-label="Close dialog"></md-icon>
+            Save
+        </md-button>
+        <span flex></span>
+        <md-button ng-click="answer('not useful')" >
+            <md-icon  md-svg-icon="ic_undo_24px" aria-label="Close dialog"></md-icon>
+            Cancel
+        </md-button>
+    </div>
+</md-dialog>

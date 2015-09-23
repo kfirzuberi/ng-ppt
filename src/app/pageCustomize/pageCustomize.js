@@ -4,14 +4,13 @@
 angular.module( 'ngBoilerplate.pageCustomize', [
 
 ])
-    .controller( 'pageCustomizeCtrl', function ( $scope , $rootScope,listOfValue) {
+    .controller('pageCustomizeCtrl', function ( $scope , $rootScope,$mdDialog,listOfValue,currentPage) {
         $scope.contentClass = [];
         Enumerable.From(listOfValue.contentClass).ForEach(function (elem) {
             $scope.contentClass.push(elem);
         });
-
-
-        $scope.currentPage = {
+        $scope.currentPage = currentPage;
+/*        $scope.currentPage = {
             nav: {
                 class: 'com__nav-link centered',
                 thumbs: [
@@ -32,6 +31,16 @@ angular.module( 'ngBoilerplate.pageCustomize', [
                 class: 'animate slideInLeft delay-3',
                 content: 'some content'
             }
+        }; */
+
+        $scope.hide = function() {
+            $mdDialog.hide();
+        };
+        $scope.cancel = function() {
+            $mdDialog.cancel();
+        };
+        $scope.answer = function(answer) {
+            $mdDialog.hide(answer);
         };
 
         $rootScope.$on('editPage',function(e,page){

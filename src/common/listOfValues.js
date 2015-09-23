@@ -17,12 +17,12 @@ angular.module( 'ngBoilerplate.services', [
         self.animation['scaleIn'] = 'scaleIn';
 
         self.direction = {};
-        self.direction['none'] = '';
+        self.direction['none'] = ' ';
         self.direction['right'] = 'Right';
         self.direction['left'] = 'Left';
 
         self.delay = {};
-        self.delay['0'] = '';
+        self.delay['0'] = 'delay-0';
         self.delay['1'] = 'delay-1';
         self.delay['2'] = 'delay-2';
         self.delay['3'] = 'delay-3';

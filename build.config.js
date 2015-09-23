@@ -75,6 +75,8 @@ module.exports = {
     css: [
       'vendor/angular-material/angular-material.min.css'
     ],
-    assets: []
+    assets: [
+        'vendor/material-design-icons-master/sprites/svg-sprite/*.svg'
+    ]
   },
 };

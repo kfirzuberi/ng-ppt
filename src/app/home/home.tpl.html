@@ -8,10 +8,10 @@
       </section>
       <section ng-if="content.isHalf" class="{{content.content_class}}" >
         <div class="com__section-half">
-          <single-page-view ng-model="content.content.sideB"></single-page-view>
+          <single-page-view ng-model="content.content.sideA"></single-page-view>
         </div>
         <div class="com__section-half">
-          <single-page-view ng-model="content.content.sideA"></single-page-view>
+          <single-page-view ng-model="content.content.sideB"></single-page-view>
       </div>
       </section>
     </div>
@@ -21,10 +21,10 @@
   <nav class="com__nav">
     <ul class="com__nav-list">
       <li class="com__nav-item" ng-repeat="content in contents" >
-        <a ng-if="!content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage(content);">
+        <a ng-if="!content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage($event,content);">
           <span ng-repeat="thumb in content.nav.thumbs" class="{{thumb.class}}"></span>
         </a>
-        <a ng-if="content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage(content);">
+        <a ng-if="content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage($event,content);">
           <div class="com__section-half">
             <span ng-repeat="thumb in content.nav.sideA.thumbs" class="{{thumb.class}}"></span>
           </div>
@@ -36,5 +36,4 @@
     </ul>
   </nav>
 
-  <page-customize></page-customize>
 </div>

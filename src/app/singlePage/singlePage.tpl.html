@@ -1,5 +1,8 @@
 <div>
-    <div layout layout-sm="column" ng-if="ngModel.title">
+    <div layout layout-sm="column">
+        <md-checkbox ng-model="ngModel.title" aria-label="title">
+        </md-checkbox>
+
         <md-input-container flex>
             <label>Title</label>
             <input ng-model="ngModel.title.content">
@@ -27,7 +30,7 @@
     <div layout layout-sm="column" ng-if="ngModel.content">
         <md-input-container flex>
             <label>Content</label>
-            <input ng-model="ngModel.content.content">
+            <textarea ng-model="ngModel.content.content" columns="1">
         </md-input-container>
         <md-input-container>
             <label>Animation</label>

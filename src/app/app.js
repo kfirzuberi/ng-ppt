@@ -1,14 +1,16 @@
 angular.module( 'ngBoilerplate', [
+    'ngMaterial',
   'templates-app',
+
   'templates-common',
+    'ngBoilerplate.config',
   'ngBoilerplate.home',
   'ngBoilerplate.about',
   'ngBoilerplate.pageCustomize',
   'ngBoilerplate.services',
   'ngBoilerplate.singlePage',
     'ngBoilerplate.singlePageView',
-  'ui.router',
-  'ngMaterial'
+  'ui.router'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
