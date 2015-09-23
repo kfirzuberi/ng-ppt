@@ -4,21 +4,15 @@
   <div class="com__content">
     <div ng-repeat="content in contents">
       <section ng-if="!content.isHalf" class="{{content.content_class}}" >
-        <h1 class="{{content.title.class}}">{{content.title.content}}</h1>
-        <img ng-if="content.image" class="{{content.image.class}}" ng-src="{{content.image.src}}" alt="" />
-        <p ng-if="content.content" class="{{content.content.class}}">{{content.content.content}}</p>
+        <single-page-view ng-model="content"></single-page-view>
       </section>
       <section ng-if="content.isHalf" class="{{content.content_class}}" >
         <div class="com__section-half">
-          <h1 ng-if="content.content.sideA.title" class="{{content.content.sideA.title.class}}">{{content.content.sideA.title.content}}</h1>
-          <p ng-if="content.content.sideA.content" class="{{content.content.sideA.content.class}}">{{content.content.sideA.content.content}}</p>
-          <img ng-if="content.content.sideA.image" class="{{content.content.sideA.image.class}}" ng-src="{{content.content.sideA.image.src}}" alt="" />
+          <single-page-view ng-model="content.content.sideB"></single-page-view>
         </div>
         <div class="com__section-half">
-          <h1 ng-if="content.content.sideB.title" class="{{content.content.sideB.title.class}}">{{content.content.sideB.title.content}}</h1>
-          <p ng-if="content.content.sideB.content" class="{{content.content.sideB.content.class}}">{{content.content.sideB.content.content}}</p>
-          <img ng-if="content.content.sideB.image" class="{{content.content.sideB.image.class}}" ng-src="{{content.content.sideB.image.src}}" alt="" />
-        </div>
+          <single-page-view ng-model="content.content.sideA"></single-page-view>
+      </div>
       </section>
     </div>
   </div>

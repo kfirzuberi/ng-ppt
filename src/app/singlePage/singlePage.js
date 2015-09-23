@@ -5,9 +5,9 @@ angular.module( 'ngBoilerplate.singlePage', [
 
 ])
     .controller( 'singlePageCtrl', function ( $scope , $rootScope,listOfValue) {
-        $scope.titleClass = [];
-        $scope.textClass = [];
-        $scope.imageClass = [];
+        $scope.animationClass = [];
+        $scope.directionClass = [];
+        $scope.delayClass = [];
 
         $scope.fillArrays = function(source, target) {
             Enumerable.From(source).ForEach(function (elem) {
@@ -15,9 +15,9 @@ angular.module( 'ngBoilerplate.singlePage', [
             });
         };
 
-        $scope.fillArrays(listOfValue.textClass,$scope.textClass);
-        $scope.fillArrays(listOfValue.imageClass,$scope.imageClass);
-        $scope.fillArrays(listOfValue.titleClass,$scope.titleClass);
+        $scope.fillArrays(listOfValue.animation,$scope.animationClass);
+        $scope.fillArrays(listOfValue.direction,$scope.directionClass);
+        $scope.fillArrays(listOfValue.delay,$scope.delayClass);
     })
 
     .directive('singlePage', function() {

@@ -5,9 +5,21 @@
             <input ng-model="ngModel.title.content">
         </md-input-container>
         <md-input-container>
-            <label>Class</label>
-            <md-select ng-model="ngModel.title.class">
-                <md-option ng-repeat="class in titleClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            <label>Animation</label>
+            <md-select ng-model="ngModel.title.class.animation">
+                <md-option ng-repeat="class in animationClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container>
+            <label>Direction</label>
+            <md-select ng-model="ngModel.title.class.direction">
+                <md-option ng-repeat="class in directionClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container>
+            <label>Delay</label>
+            <md-select ng-model="ngModel.title.class.delay">
+                <md-option ng-repeat="class in delayClass" value="{{class.Value}}">{{class.Key}}</md-option>
             </md-select>
         </md-input-container>
     </div>
@@ -18,9 +30,21 @@
             <input ng-model="ngModel.content.content">
         </md-input-container>
         <md-input-container>
-            <label>Class</label>
-            <md-select ng-model="ngModel.content.class">
-                <md-option ng-repeat="class in textClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            <label>Animation</label>
+            <md-select ng-model="ngModel.content.class.animation">
+                <md-option ng-repeat="class in animationClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container>
+            <label>Direction</label>
+            <md-select ng-model="ngModel.content.class.direction">
+                <md-option ng-repeat="class in directionClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container>
+            <label>Delay</label>
+            <md-select ng-model="ngModel.content.class.delay">
+                <md-option ng-repeat="class in delayClass" value="{{class.Value}}">{{class.Key}}</md-option>
             </md-select>
         </md-input-container>
     </div>
@@ -31,9 +55,21 @@
             <input ng-model="ngModel.image.src">
         </md-input-container>
         <md-input-container>
-            <label>Class</label>
-            <md-select ng-model="ngModel.image.class">
-                <md-option ng-repeat="class in imageClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            <label>Animation</label>
+            <md-select ng-model="ngModel.image.class.animation">
+                <md-option ng-repeat="class in animationClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container>
+            <label>Direction</label>
+            <md-select ng-model="ngModel.image.class.direction">
+                <md-option ng-repeat="class in directionClass" value="{{class.Value}}">{{class.Key}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container>
+            <label>Delay</label>
+            <md-select ng-model="ngModel.image.class.delay">
+                <md-option ng-repeat="class in delayClass" value="{{class.Value}}">{{class.Key}}</md-option>
             </md-select>
         </md-input-container>
     </div>

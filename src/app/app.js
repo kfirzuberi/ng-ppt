@@ -6,6 +6,7 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.pageCustomize',
   'ngBoilerplate.services',
   'ngBoilerplate.singlePage',
+    'ngBoilerplate.singlePageView',
   'ui.router',
   'ngMaterial'
 ])
