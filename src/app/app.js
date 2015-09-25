@@ -6,6 +6,7 @@ angular.module( 'ngBoilerplate', [
     'ngBoilerplate.config',
   'ngBoilerplate.home',
   'ngBoilerplate.about',
+  'ngBoilerplate.colorPickerCtrl',
   'ngBoilerplate.pageCustomize',
   'ngBoilerplate.services',
   'ngBoilerplate.singlePage',

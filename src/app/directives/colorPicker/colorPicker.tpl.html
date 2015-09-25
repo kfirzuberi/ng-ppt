@@ -1,0 +1,19 @@
+<md-menu>
+    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+        <md-icon md-menu-origin md-svg-icon="ic_clear_24px"></md-icon>
+    </md-button>
+    <md-menu-content width="2" style="width: 256px; height: 276px">
+        <md-menu-item>
+            <div layout="row" layout-wrap>
+                <div ng-repeat="color in colors" >
+                    <md-button ng-click="changeColor(color.Key);" class="md-fab md-mini" style="background-color: {{color.Value}}" aria-label="Eat cake">
+                        <md-icon ng-show="ngModel.color===color.Key" md-menu-origin md-svg-icon="action:ic_done_24px"></md-icon>
+                        <md-tooltip>
+                            {{color.Key}}
+                        </md-tooltip>
+                    </md-button>
+                </div>
+            </div>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>

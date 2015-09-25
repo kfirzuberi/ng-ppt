@@ -1,6 +1,6 @@
 <div>
     <div layout layout-sm="column">
-        <md-checkbox ng-model="ngModel.title" aria-label="title">
+        <md-checkbox aria-label="title">
         </md-checkbox>
 
         <md-input-container flex>
@@ -25,12 +25,16 @@
                 <md-option ng-repeat="class in delayClass" value="{{class.Value}}">{{class.Key}}</md-option>
             </md-select>
         </md-input-container>
+        <md-input-container>
+            <label>Color</label>
+            <color-picker ng-model="ngModel.title"></color-picker>
+        </md-input-container>
     </div>
 
     <div layout layout-sm="column" ng-if="ngModel.content">
         <md-input-container flex>
             <label>Content</label>
-            <textarea ng-model="ngModel.content.content" columns="1">
+            <textarea ng-model="ngModel.content.content" columns="1"></textarea>
         </md-input-container>
         <md-input-container>
             <label>Animation</label>

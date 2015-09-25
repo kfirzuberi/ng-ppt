@@ -9,6 +9,7 @@ angular.module( 'ngBoilerplate.pageCustomize', [
         Enumerable.From(listOfValue.contentClass).ForEach(function (elem) {
             $scope.contentClass.push(elem);
         });
+
         $scope.currentPage = currentPage;
 /*        $scope.currentPage = {
             nav: {
@@ -70,3 +71,5 @@ angular.module( 'ngBoilerplate.pageCustomize', [
     })
 
 ;
+
+

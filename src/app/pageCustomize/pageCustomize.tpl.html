@@ -19,6 +19,10 @@
                     <md-select ng-model="currentPage.content_class">
                         <md-option ng-repeat="class in contentClass" value="{{class.Value}}">{{class.Key}}</md-option>
                     </md-select>
+
+                    <label>Color</label>
+                    <color-picker ng-model="currentPage.title"></color-picker>
+
                     </md-input-container>
 
                     <div ng-if="!currentPage.isHalf">

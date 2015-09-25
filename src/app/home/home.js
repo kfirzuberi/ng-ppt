@@ -50,7 +50,8 @@ angular.module( 'ngBoilerplate.home', [
           content_class: listOfValue.contentClass.title_text_center,
           title: {
             class: listOfValue.titleClass.scaleIn,
-            content: 'kfir zuberi'
+            content: 'kfir zuberi',
+            color : 'CYAN'
           },
           image: {
             class: listOfValue.imageClass.scaleIn_delay_3,

@@ -29,6 +29,34 @@ angular.module( 'ngBoilerplate.services', [
         self.delay['4'] = 'delay-4';
         self.delay['5'] = 'delay-5';
 
+        self.color = {};
+        self.color['RED']='#F44336';
+        self.color['PINK']='#E91E63';
+        self.color['PURPLE']='#9C27B0';
+        self.color['DEEP_PURPLE']= '#673AB7';
+        self.color['INDIGO']= '#3F51B5';
+        self.color['BLUE']='#2196F3';
+        self.color['LIGHT_BLUE']='#03A9F4';
+        self.color['CYAN']= '#00BCD4';
+        self.color['TEAL']='#009688';
+        self.color['GREEN']='#4CAF50';
+        self.color['LIGHT_GREEN']= '#8BC34A';
+        self.color['LIME']='#CDDC39';
+        self.color['YELLOW']='#FFEB3B';
+        self.color['AMBER']='#FFC107';
+        self.color['ORANGE']= '#FF9800';
+        self.color['DEEP_ORANGE']='#FF5722';
+        self.color['BROWN']='#795548';
+        self.color['GREY']='#9E9E9E';
+        self.color['BLUE_GREY']= '#607D8B';
+
+        self.defaultColor = self.color.CYAN;
+
+
+
+
+
+
         self.titleClass = {};
         self.titleClass['scaleIn'] = {
             constant: 'animate',
