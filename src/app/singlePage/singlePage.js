@@ -5,19 +5,18 @@ angular.module( 'ngBoilerplate.singlePage', [
 
 ])
     .controller( 'singlePageCtrl', function ( $scope , $rootScope,listOfValue) {
-        $scope.animationClass = [];
-        $scope.directionClass = [];
-        $scope.delayClass = [];
+        $scope.animationClass = listOfValue.getArrayList(listOfValue.animation);
+        $scope.directionClass = listOfValue.getArrayList(listOfValue.direction);
+        $scope.delayClass = listOfValue.getArrayList(listOfValue.delay);
 
-        $scope.fillArrays = function(source, target) {
-            Enumerable.From(source).ForEach(function (elem) {
-                target.push(elem);
-            });
+        $scope.changeProperty = function (property) {
+            if($scope.ngModel[property]){
+                $scope.ngModel[property] = undefined;
+            }else{
+                $scope.ngModel[property] = {};
+            }
         };
 
-        $scope.fillArrays(listOfValue.animation,$scope.animationClass);
-        $scope.fillArrays(listOfValue.direction,$scope.directionClass);
-        $scope.fillArrays(listOfValue.delay,$scope.delayClass);
     })
 
     .directive('singlePage', function() {

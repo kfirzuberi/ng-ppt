@@ -1,5 +1,11 @@
 <div class="com" >
 
+  <div layout="column">
+    <zoomooz></zoomooz>
+    <zoomooz-shape-edit></zoomooz-shape-edit>
+  </div>
+
+
   <!--Contents-->
   <div class="com__content">
     <div ng-repeat="content in contents">
@@ -17,14 +23,16 @@
     </div>
   </div>
 
+
+
   <!--navs-->
   <nav class="com__nav">
     <ul class="com__nav-list">
       <li class="com__nav-item" ng-repeat="content in contents" >
-        <a ng-if="!content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage($event,content);">
+        <a ng-if="!content.isHalf" href="" class="{{content.nav.class}}" ng-click="choosePage(content);">
           <span ng-repeat="thumb in content.nav.thumbs" class="{{thumb.class}}"></span>
         </a>
-        <a ng-if="content.isHalf" href="" class="{{content.nav.class}}" ng-click="editPage($event,content);">
+        <a ng-if="content.isHalf" href="" class="{{content.nav.class}}" ng-click="choosePage(content);">
           <div class="com__section-half">
             <span ng-repeat="thumb in content.nav.sideA.thumbs" class="{{thumb.class}}"></span>
           </div>
@@ -35,5 +43,24 @@
       </li>
     </ul>
   </nav>
+
+
+  <div class="lock-size mainMenu" layout="row" layout-align="center center">
+    <md-fab-speed-dial md-open="demo.isOpen" md-direction="up"
+                       class="md-scale" ng-mouseenter="demo.isOpen=true" ng-mouseleave="demo.isOpen=false">
+      <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-warn" ng-click="editPage($event);">
+          <md-icon md-svg-icon="editor:ic_mode_edit_24px"></md-icon>
+          <md-tooltip>Edit</md-tooltip>
+        </md-button>
+      </md-fab-trigger>
+      <md-fab-actions>
+        <md-button aria-label="Add new" ng-click="addPage($event);" class="md-fab md-primary md-raised md-mini">
+          <md-icon md-svg-icon="ic_add_24px" aria-label="Add new"></md-icon>
+          <md-tooltip>Add new</md-tooltip>
+        </md-button>
+      </md-fab-actions>
+    </md-fab-speed-dial>
+  </div>
 
 </div>

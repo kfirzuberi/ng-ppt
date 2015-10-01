@@ -8,7 +8,7 @@
             </md-button>
         </div>
     </md-toolbar>
-    <md-dialog-content ><!--style="max-width:800px;max-height:810px; "-->
+    <md-dialog-content >
         <div layout="column" layout-align="center end">
             <md-content layout-padding>
                 <form name="userForm">
@@ -16,12 +16,12 @@
                         Page split: {{currentPage.isHalf ? 'Tow pages' : 'Single page'}}
                     </md-switch>
                     <label>Class</label>
-                    <md-select ng-model="currentPage.content_class">
+                    <md-select ng-model="currentPage.content_class" ng-change="contentClassChanged();">
                         <md-option ng-repeat="class in contentClass" value="{{class.Value}}">{{class.Key}}</md-option>
                     </md-select>
 
-                    <label>Color</label>
-                    <color-picker ng-model="currentPage.title"></color-picker>
+
+                    <style-picker></style-picker>
 
                     </md-input-container>
 

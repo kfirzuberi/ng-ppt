@@ -53,6 +53,57 @@ angular.module( 'ngBoilerplate.services', [
         self.defaultColor = self.color.CYAN;
 
 
+        self.styles = {};
+        self.styles['title_text_center'] = {
+            contentClass: 'com__section com__section--text centered',
+            nav: {
+                class: 'com__nav-link centered',
+                thumbs: [
+                    {class: 'blue-line animate scaleIn delay-3'},
+                    {class: 'white-circle animate scaleIn delay-5'}
+                ]
+            }
+        };
+        self.styles['half_text_image'] = {
+            contentClass: 'com__section com__section--text com__section--text-img',
+            nav: {
+                class: 'com__nav-link flex-row',
+                sideA: {
+                    thumbs: [
+                        {class: 'blue-line animate scaleInLeft delay-3'},
+                        {class: 'white-line animate scaleInLeft delay-4'}
+                    ]
+                },
+                sideB: {
+                    thumbs: [
+                        {class: 'white-circle animate slideInRight delay-5'}
+                    ]
+                }
+            }
+        };
+        self.styles['title_text'] = {
+            contentClass: 'com__section com__section--text',
+            nav: {
+                class: 'com__nav-link',
+                thumbs: [
+                    {class: 'blue-line animate scaleInLeft delay-2'},
+                    {class: 'white-line animate scaleInLeft delay-4'},
+                    {class: 'white-line animate scaleInLeft delay-5'}
+                ]
+            }
+        };
+
+
+        self.getArrayList = function(source) {
+            var target = [];
+
+            Enumerable.From(source).ForEach(function (elem) {
+                target.push(elem);
+            });
+
+            return target;
+        };
+
 
 
 

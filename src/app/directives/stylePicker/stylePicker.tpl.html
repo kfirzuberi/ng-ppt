@@ -1,0 +1,27 @@
+<md-menu>
+    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+        <md-icon md-menu-origin md-svg-icon="image:ic_color_lens_24px"></md-icon>
+        <md-tooltip>Choose color</md-tooltip>
+    </md-button>
+    <md-menu-content width="2" style="width: 256px; height: 276px">
+        <md-menu-item>
+            <div layout="row" layout-wrap>
+                <div flex="33" style="height: 40px; background-color: #2F6FAD" ng-repeat="style in styles">
+                    <a href="" class="{{style.Value.nav.class}}">
+                        <span ng-repeat="thumb in style.Value.nav.thumbs" class="{{thumb.class}}"></span>
+                    </a>
+                    <a ng-if="content.isHalf" href="" class="{{style.Value.nav.class}}">
+                        <div class="com__section-half">
+                            <span ng-repeat="thumb in style.Value.nav.sideA.thumbs" class="{{thumb.class}}"></span>
+                        </div>
+                        <div class="com__section-half">
+                            <span ng-repeat="thumb in style.Value.nav.sideB.thumbs" class="{{thumb.class}}"></span>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>

@@ -1,0 +1,7 @@
+<div layout layout-align="start center">
+        <span flex="25" class="md-body-1">{{ngModel.name}}</span>
+        <md-slider flex ng-model="ngModel.value" step="{{ngModel.step || 1}}" min="{{ngModel.min || 0 }}" max="{{ngModel.max || 100 }}" aria-label="{{ngModel.name}}" class="md-primary">
+        </md-slider>
+        <input flex="20" type="number" ng-model="ngModel.value" aria-label="{{ngModel.name}}" aria-controls="{{ngModel.name}}-slider">
+        <span flex="10"  class="md-body-1">{{ngModel.unit || ''}}</span>
+</div>

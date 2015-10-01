@@ -1,6 +1,7 @@
 <div>
     <div layout layout-sm="column">
-        <md-checkbox aria-label="title">
+        <md-checkbox aria-label="title" ng-click="changeProperty('title');" ng-checked="ngModel.title">
+            <md-tooltip>Show/Hide title</md-tooltip>
         </md-checkbox>
 
         <md-input-container flex>
@@ -26,12 +27,14 @@
             </md-select>
         </md-input-container>
         <md-input-container>
-            <label>Color</label>
             <color-picker ng-model="ngModel.title"></color-picker>
         </md-input-container>
     </div>
 
-    <div layout layout-sm="column" ng-if="ngModel.content">
+    <div layout layout-sm="column">
+        <md-checkbox aria-label="title" ng-click="changeProperty('content');" ng-checked="ngModel.content">
+            <md-tooltip>Show/Hide content</md-tooltip>
+        </md-checkbox>
         <md-input-container flex>
             <label>Content</label>
             <textarea ng-model="ngModel.content.content" columns="1"></textarea>
@@ -54,9 +57,15 @@
                 <md-option ng-repeat="class in delayClass" value="{{class.Value}}">{{class.Key}}</md-option>
             </md-select>
         </md-input-container>
+        <md-input-container>
+            <color-picker ng-model="ngModel.content"></color-picker>
+        </md-input-container>
     </div>
 
-    <div layout layout-sm="column" ng-if="ngModel.image">
+    <div layout layout-sm="column">
+        <md-checkbox aria-label="title" ng-click="changeProperty('image');" ng-checked="ngModel.image">
+            <md-tooltip>Show/Hide image</md-tooltip>
+        </md-checkbox>
         <md-input-container flex>
             <label>Image</label>
             <input ng-model="ngModel.image.src">

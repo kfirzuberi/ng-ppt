@@ -1,0 +1,27 @@
+<div layout="column" layout-align="center start">
+
+    <div class="zoomTarget shape shape-normal" ng-style="{'transform': getTransform(), '-webkit-transform': getTransform(), '-ms-transform': getTransform() }">
+
+    </div>
+
+    <div layout="column">
+        <div layout layout-align="start center">
+            <key-value-slider ng-model="shapeParameters.skewX"></key-value-slider>
+            <key-value-slider ng-model="shapeParameters.skewY"></key-value-slider>
+        </div>
+        <div layout layout-align="start center">
+            <key-value-slider flex ng-model="shapeParameters.scaleX"></key-value-slider>
+            <key-value-slider flex ng-model="shapeParameters.scaleY"></key-value-slider>
+        </div>
+        <div layout layout-align="start center">
+            <key-value-slider flex ng-model="shapeParameters.translateX"></key-value-slider>
+            <key-value-slider flex ng-model="shapeParameters.translateY"></key-value-slider>
+        </div>
+
+        <key-value-slider ng-model="shapeParameters.rotate"></key-value-slider>
+    </div>
+
+</div>
+
+
+

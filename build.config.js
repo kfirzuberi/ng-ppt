@@ -70,7 +70,8 @@ module.exports = {
       'vendor/angular-animate/angular-animate.min.js',
       'vendor/angular-aria/angular-aria.min.js',
       'vendor/angular-material/angular-material.min.js',
-      'vendor/linqjs/linq.min.js'
+      'vendor/linqjs/linq.min.js',
+      'vendor/zoomooz/jquery.zoomooz.js'
     ],
     css: [
       'vendor/angular-material/angular-material.min.css'

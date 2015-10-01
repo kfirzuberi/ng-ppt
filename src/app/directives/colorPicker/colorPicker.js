@@ -5,10 +5,7 @@ angular.module( 'ngBoilerplate.colorPickerCtrl', [
 
 ])
     .controller('colorPickerCtrl', function ( $scope , $rootScope,listOfValue) {
-        $scope.colors = [];
-        Enumerable.From(listOfValue.color).ForEach(function (elem) {
-            $scope.colors.push(elem);
-        });
+        $scope.colors = listOfValue.getArrayList(listOfValue.color);
 
         $scope.changeColor = function (color) {
             $scope.ngModel.color = color;

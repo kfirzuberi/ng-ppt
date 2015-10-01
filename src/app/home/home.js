@@ -18,14 +18,14 @@ angular.module( 'ngBoilerplate.home', [
 })
 
 .controller('HomeCtrl', function HomeController($scope,$rootScope,$mdDialog ,listOfValue) {
-      $scope.editPage = function (event,page) {
+      $scope.editPage = function (event) {
 
         $mdDialog.show({
           controller: 'pageCustomizeCtrl',
           templateUrl: 'pageCustomize/pageCustomize.tpl.html',
           parent: angular.element(document.body),
           targetEvent: event,
-          locals: { currentPage: page },
+          locals: { currentPage: $scope.currentPage },
           bindToController: true,
           clickOutsideToClose: true
         }).then(function (answer) {
@@ -33,9 +33,17 @@ angular.module( 'ngBoilerplate.home', [
         }, function () {
           $scope.status = 'You cancelled the dialog.';
         });
+      };
 
-        //$rootScope.$broadcast('editPage', page);
+      $scope.addPage = function (event) {
+        var newItem = {};
+        $scope.contents.push(newItem);
+        $scope.choosePage(newItem);
+        $scope.editPage(event);
+      };
 
+      $scope.choosePage = function(page) {
+        $scope.currentPage = page;
       };
 
       $scope.contents = [
